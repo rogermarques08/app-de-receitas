@@ -27,13 +27,6 @@
     "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js,.jsx",
     "lint:styles": "npx stylelint '**/*.css'"
   },
-  'script':
-{
-   "dev": "next dev",
-             ==>  "build": "next build", 
-    "start": "next start",
-    "lint": "next lint"
-},
   "eslintConfig": {
     "extends": "react-app"
   },
