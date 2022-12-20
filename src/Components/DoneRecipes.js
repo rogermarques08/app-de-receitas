@@ -1,10 +1,11 @@
+/* eslint-disable react/jsx-max-depth */
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { GiMeal, GiShare } from 'react-icons/gi';
 import { BiDrink } from 'react-icons/bi';
+import { GiMeal, GiShare } from 'react-icons/gi';
 import { MdFastfood } from 'react-icons/md';
-import Footer from './Footer';
+import { Link } from 'react-router-dom';
 import '../style/doneRecipes.css';
+import Footer from './Footer';
 import Header from './Header';
 
 const copy = require('clipboard-copy');
@@ -106,9 +107,18 @@ function DoneRecipes() {
 
                       </p>
                     )}
-                    <p data-testid={ `${index}-horizontal-done-date` }>{`done in : ${recipe.doneDate.split('T')[0]}`}</p>
+                    <p data-testid={ `${index}-horizontal-done-date` }>
+                      {`done in : ${recipe.doneDate.split('T')[0]}`}
+
+                    </p>
                     {recipe.tags && recipe.tags.slice(0, 2).map((i) => (
-                      <p data-testid={ `${index}-${i}-horizontal-tag` } key={ i } className="tags">{i}</p>
+                      <p
+                        data-testid={ `${index}-${i}-horizontal-tag` }
+                        key={ i }
+                        className="tags"
+                      >
+                        {i}
+                      </p>
                     ))}
                   </div>
                 </div>
